@@ -19,7 +19,7 @@
 
 
 	<select id="findAll" resultMap="userMap">
-        select * from T_USER
+        select * from T_USER order by USERNAME
     </select>
 
     <select id="findTotalCount" resultType="int">

@@ -52,7 +52,7 @@
 		};
 		
 		$.ajax({
-			url : '${pageContext.request.contextPath}/function_treelist.action',
+			url : '${pageContext.request.contextPath}/function_menu.do',
 			type : 'POST',
 			dataType : 'text',
 			success : function(data) {

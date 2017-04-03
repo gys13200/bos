@@ -37,7 +37,7 @@
 			data : {
 				simpleData : { // 简单数据 
 					enable : true,
-					pIdKey: "pid"
+					pIdKey: "_parentId"
 				}
 			},
 			callback : {
@@ -52,7 +52,10 @@
 			dataType : 'text',
 			success : function(data) {
 				var zNodes = eval("(" + data + ")");
-				$.fn.zTree.init($("#treeMenu"), setting, zNodes);
+				if(zNodes && zNodes.rows){
+                    $.fn.zTree.init($("#treeMenu"), setting, zNodes.rows);
+				}
+
 			},
 			error : function(msg) {
 				alert('菜单加载异常!');

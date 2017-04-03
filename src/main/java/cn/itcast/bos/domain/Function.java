@@ -1,6 +1,10 @@
 package cn.itcast.bos.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 public class Function {
 	@Override
 	public String toString() {
@@ -19,6 +23,7 @@ public class Function {
 
 	private Long zindex;
 
+	@JsonProperty(value = "_parentId")
 	private String pid;
 
 	public String getId() {

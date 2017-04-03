@@ -28,7 +28,7 @@
 	type="text/javascript"></script>
 <script type="text/javascript">
 	$(function(){
-		$("#grid").datagrid({
+		$("#grid").treegrid({
 			toolbar : [
 				{
 					id : 'add',
@@ -40,6 +40,8 @@
 				}           
 			],
 			url : '${pageContext.request.contextPath}/function_menu.do',
+            idField:'id',
+            treeField:'name',
 			columns : [[
 			  {
 				  field : 'id',
@@ -49,7 +51,7 @@
 			  {
 				  field : 'name',
 				  title : '名称',
-				  width : 100
+				  width : 200
 			  },  
 			  {
 				  field : 'description',
